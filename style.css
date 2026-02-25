@@ -1,4 +1,4 @@
-/* Baza stil */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
@@ -45,17 +45,19 @@ section {
     max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
+    text-align: center; /* Başlıqlar və kart konteyner mərkəzləşsin */
 }
 
 /* Section başlıqları */
 section h2 {
     color: #1a73e8;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #1a73e8;
     display: inline-block;
     padding-bottom: 5px;
     font-size: 25px;
+    text-align: center;
 }
 
 /* Kart konteyner */
@@ -63,7 +65,7 @@ section h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* kartlar arası məsafə */
-    justify-content: flex-start;
+    justify-content: center; /* kartlar mərkəzə düzüləcək */
 }
 
 /* Hər bir kart */
@@ -74,6 +76,7 @@ section h2 {
     padding: 20px;
     flex: 1 1 calc(45% - 20px); /* iki kart yan-yana */
     transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px; /* kart genişliyini limitləyirik */
 }
 
 /* Hover effekti */
