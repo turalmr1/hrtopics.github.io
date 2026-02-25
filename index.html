@@ -4,6 +4,71 @@
     <meta charset="UTF-8">
     <title>HR Topics</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Card stili əlavə olundu */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            flex: 1 1 250px;
+            max-width: 300px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95em;
+            line-height: 1.4em;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #1a73e8;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            background-color: #155ab6;
+        }
+
+        section h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1a73e8;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 25px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,89 +76,93 @@
 <header style="background-image: url(/images/cover2.jpg); background-repeat: no-repeat; background-size: cover; text-align:center; padding:80px 20px; color:#fff;">
     <h1>HR TOPICS</h1>
     <p>İnsanlara yatırım etmək, təşkilatın gələcəyinə yatırım etməkdir.</p>
-    <button onclick="location.href='#contact'" style="padding:10px 20px; border:none; border-radius:5px; background-color:#0077b5; color:white; cursor:pointer;">Bizimlə əlaqə</button>
+    <button onclick="location.href='#contact'">Bizimlə əlaqə</button>
 </header>
 
 <!-- Məqalələr Bölməsi -->
-<section id="articles" style="padding:40px 10px;">
+<section id="articles">
     <h2>Məqalələr</h2>
-    <ol style="padding-left: 20px;">
-        <li><a href="/blog/insan-resurslarinin-teskilati-idareetmede-istirak-seviyyesi.html">İnsan resurslarının təşkilati idarəetmədə iştirak səviyyəsi</a></li>
-        <li><a href="/blog/liderlik-uslublari-ve-onlarin-effektiv-oldugu-ve-olmadigi-situasiyalar.html">Liderlik üslubları və effektiv olduqları situasiyalar</a></li>
-    </ol>
+    <div class="card-container">
+        <div class="card">
+            <h3>İnsan resurslarının təşkilati idarəetmədə iştirak səviyyəsi</h3>
+            <p>HR funksiyasının inkişaf mərhələləri və təşkilati idarəetmədə rolu.</p>
+            <a href="/blog/insan-resurslarinin-teskilati-idareetmede-istirak-seviyyesi.html" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>Liderlik üslubları və effektiv olduqları situasiyalar</h3>
+            <p>Liderlik nəzəriyyələri və situasiyalara uyğun effektiv yanaşmalar.</p>
+            <a href="/blog/liderlik-uslublari-ve-onlarin-effektiv-oldugu-ve-olmadigi-situasiyalar.html" target="_blank">Ətraflı bax</a>
+        </div>
+    </div>
 </section>
 
 <!-- HR Resurs Kitabxanası -->
-<section id="library" style="padding:40px 20px; background-color:#f9f9f9;">
+<section id="library" style="background-color:#f9f9f9;">
     <h2>HR Resurs Kitabxanası</h2>
     <p>HR sahəsində oxuya biləcəyiniz kitablar, təlim materialları və faydalı resurslar:</p>
-
-    <ul>
-        <li>
-            <strong>SHRM Competencies 2022</strong> – Müəllif: SHRM  
-            <br>Qısa təsvir: İnsan resursları üzrə əsas kompetensiyalar və liderlik bacarıqları.  
-            <br>🔗 <a href="https://www.shrm.org/certification/educational-resources/pages/shrm-competencies.aspx" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-
-        <li>
-            <strong>SHRM People 2023</strong> – Müəllif: SHRM  
-            <br>Qısa təsvir: İşçi performansı, motivasiya və istedad idarəçiliyi üzrə əsas prinsiplər.  
-            <br>🔗 <a href="https://www.shrm.org/resourcesandtools/hr-topics/people/pages/default.aspx" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-
-        <li>
-            <strong>Leadership: Theory and Practice</strong> – Müəllif: Peter G. Northouse  
-            <br>Qısa təsvir: Liderlik nəzəriyyələri və praktiki nümunələr.  
-            <br>🔗 <a href="https://www.amazon.com/Leadership-Practice-Peter-G-Northouse/dp/1506362319" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-
-        <li>
-            <strong>HR Analytics Handbook</strong> – Müəllif: Jane Doe  
-            <br>Qısa təsvir: HR analitika və data əsaslı qərarvermə üçün praktiki bələdçi.  
-            <br>🔗 <a href="https://www.example.com/hr-analytics" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-    </ul>
+    <div class="card-container">
+        <div class="card">
+            <h3>SHRM Competencies 2022</h3>
+            <p>Müəllif: SHRM<br>İnsan resursları üzrə əsas kompetensiyalar və liderlik bacarıqları.</p>
+            <a href="https://www.shrm.org/certification/educational-resources/pages/shrm-competencies.aspx" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>SHRM People 2023</h3>
+            <p>Müəllif: SHRM<br>İşçi performansı, motivasiya və istedad idarəçiliyi üzrə əsas prinsiplər.</p>
+            <a href="https://www.shrm.org/resourcesandtools/hr-topics/people/pages/default.aspx" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>Leadership: Theory and Practice</h3>
+            <p>Müəllif: Peter G. Northouse<br>Liderlik nəzəriyyələri və praktiki nümunələr.</p>
+            <a href="https://www.amazon.com/Leadership-Practice-Peter-G-Northouse/dp/1506362319" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>HR Analytics Handbook</h3>
+            <p>Müəllif: Jane Doe<br>HR analitika və data əsaslı qərarvermə üçün praktiki bələdçi.</p>
+            <a href="https://www.example.com/hr-analytics" target="_blank">Ətraflı bax</a>
+        </div>
+    </div>
 </section>
 
 <!-- Təlimlər / Kurslar -->
-<section id="courses" style="padding:40px 20px;">
+<section id="courses">
     <h2>Təlimlər / Kurslar</h2>
-    <ul>
-        <li>
-            <strong>Performans İdarəçiliyi</strong> – 3 həftə, online  
-            <br>İşçi performansının qiymətləndirilməsi və inkişaf planlarının hazırlanması  
-            <br>🔗 <a href="#" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-        <li>
-            <strong>HR Analitika və Dashboard</strong> – 2 həftə, online  
-            <br>Power BI və data əsaslı HR qərarvermə  
-            <br>🔗 <a href="#" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-    </ul>
+    <div class="card-container">
+        <div class="card">
+            <h3>Performans İdarəçiliyi</h3>
+            <p>3 həftə, online<br>İşçi performansının qiymətləndirilməsi və inkişaf planlarının hazırlanması.</p>
+            <a href="#" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>HR Analitika və Dashboard</h3>
+            <p>2 həftə, online<br>Power BI və data əsaslı HR qərarvermə.</p>
+            <a href="#" target="_blank">Ətraflı bax</a>
+        </div>
+    </div>
 </section>
 
 <!-- Case Studies / Analizlər -->
-<section id="case-studies" style="padding:40px 20px; background-color:#f9f9f9;">
+<section id="case-studies" style="background-color:#f9f9f9;">
     <h2>Case Studies / Analizlər</h2>
-    <ul>
-        <li>
-            İşçi dövriyyəsinin azaldılması üçün strategiyalar  
-            <br>Qısa təsvir: Təşkilatda çıxış analizi, motivasiya və retention strategiyası.  
-            <br>🔗 <a href="#" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-        <li>
-            Performans və təlim inteqrasiyası  
-            <br>Qısa təsvir: HR dashboard və təlim məlumatlarının rəhbərliyə necə kömək etdiyi.  
-            <br>🔗 <a href="#" target="_blank" rel="noopener noreferrer">Ətraflı bax</a>
-        </li>
-    </ul>
+    <div class="card-container">
+        <div class="card">
+            <h3>İşçi dövriyyəsinin azaldılması üçün strategiyalar</h3>
+            <p>Təşkilatda çıxış analizi, motivasiya və retention strategiyası.</p>
+            <a href="#" target="_blank">Ətraflı bax</a>
+        </div>
+        <div class="card">
+            <h3>Performans və təlim inteqrasiyası</h3>
+            <p>HR dashboard və təlim məlumatlarının rəhbərliyə necə kömək etdiyi.</p>
+            <a href="#" target="_blank">Ətraflı bax</a>
+        </div>
+    </div>
 </section>
 
 <!-- Əlaqə -->
-<section id="contact" style="padding:40px 20px; text-align:center;">
+<section id="contact" style="text-align:center;">
     <h2>Bizimlə Əlaqə</h2>
     <p>Email: <a href="mailto:t.mustafazadeh@gmail.com">info@hrtopics.az</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/turalmustafazada/" target="_blank" rel="noopener noreferrer">Profilim</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/turalmustafazada/" target="_blank">Profilim</a></p>
 </section>
 
 <!-- Footer -->
