@@ -7,22 +7,54 @@ body {
     padding: 0;
 }
 
+/* ========================= */
+/*          NAVBAR           */
+/* ========================= */
+
 nav {
     background-color: #1a73e8;
-    padding: 15px;
-    text-align: right;
+    padding: 15px 0;
+    text-align: center; /* Artıq sağ yox, mərkəz */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
+/* Hover effekti */
 nav a:hover {
-    text-decoration: underline;
+    color: #e8f0fe;
 }
+
+/* Alt xətt animasiyası */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ========================= */
+/*          HEADER           */
+/* ========================= */
 
 header {
     background-color: #e8f0fe;
@@ -45,7 +77,7 @@ section {
     max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
-    text-align: center; /* Başlıqlar və kart konteyner mərkəzləşsin */
+    text-align: center;
 }
 
 /* Section başlıqları */
@@ -64,28 +96,26 @@ section h2 {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* kartlar arası məsafə */
-    justify-content: center; /* kartlar mərkəzə düzüləcək */
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Hər bir kart */
+/* Kart */
 .card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
-    flex: 1 1 calc(45% - 20px); /* iki kart yan-yana */
+    flex: 1 1 calc(45% - 20px);
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 300px; /* kart genişliyini limitləyirik */
+    max-width: 300px;
 }
 
-/* Hover effekti */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Kart başlıqları və linklər */
 .card h3 {
     color: #1a73e8;
     margin-top: 0;

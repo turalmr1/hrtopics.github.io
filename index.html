@@ -2,15 +2,61 @@
 <html lang="az">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR Topics</title>
     <link rel="stylesheet" href="../style.css">
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #1a73e8;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #e8f0fe;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
         /* Kart stili */
         .card-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center; /* kartları mərkəzləşdirir */
+            justify-content: center;
             margin-top: 20px;
         }
 
@@ -32,13 +78,13 @@
         .card h3 {
             color: #1a73e8;
             margin-bottom: 10px;
-            text-align: center; /* başlıqları mərkəzləşdirir */
+            text-align: center;
         }
 
         .card p {
             font-size: 0.95em;
             line-height: 1.4em;
-            text-align: center; /* mətn mərkəzləşdirilib */
+            text-align: center;
         }
 
         .card a {
@@ -50,7 +96,6 @@
             padding: 8px 15px;
             border-radius: 5px;
             font-weight: bold;
-            text-align: center;
         }
 
         .card a:hover {
@@ -61,8 +106,7 @@
             color: #1a73e8;
             margin-bottom: 25px;
             border-bottom: 2px solid #1a73e8;
-            display: block;
-            text-align: center; /* bölmə başlıqları ortada */
+            text-align: center;
             padding-bottom: 5px;
             font-size: 30px;
         }
@@ -74,7 +118,17 @@
         }
     </style>
 </head>
+
 <body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#articles">Məqalələr</a>
+    <a href="#library">Resurslar</a>
+    <a href="#courses">Təlimlər</a>
+    <a href="#case-studies">Analizlər</a>
+    <a href="#contact">Əlaqə</a>
+</nav>
 
 <!-- Header -->
 <header style="background-image: url(/images/cover2.jpg); background-repeat: no-repeat; background-size: cover; text-align:center; padding:80px 20px; color:#fff;">
